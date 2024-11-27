@@ -135,3 +135,13 @@ img {
 	font-size: 1.2em;
 	color: #555;
 }
+
+.button.is-red {
+	margin-top: 10px;
+	background-color:darkred; 
+	color: white; 
+}
+
+.button.is-red:hover {
+	background-color: rgba(173, 1, 33, 0.512); 
+}
