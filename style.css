@@ -10,7 +10,7 @@ html {
 	width: 100%;
 }
 
-h1{
+h1 {
 	font-family: "Amatic SC", sans-serif;
 	color: #fff;
 	font-size: 7rem;
@@ -19,6 +19,7 @@ h1{
 .featured_wrapper {
 	position: relative;
 }
+
 .featured_wrapper img {
 	width: 100%;
 	height: 70vh;
@@ -34,20 +35,23 @@ h1{
 	padding: 20px 40px;
 	box-sizing: border-box;
 }
+
 .title_wrapper h1 {
 	width: 70%;
 }
+
 .container {
 	padding-bottom: 3rem;
 	padding-top: 5em;
 }
+
 img {
 	transition: all 0.5s ease;
 }
+
 .container img:hover {
 	transform: scale(1.1);
 }
-
 
 .slider {
 	position: relative;
@@ -86,13 +90,14 @@ img {
 	animation: slide-animation 18s infinite;
 }
 
-.footer{
+.footer {
 	background-color: rgba(173, 1, 33, 0.512);
 }
 
-.navbar{
+.navbar {
 	background-color: rgba(173, 1, 33, 0.512);
 }
+
 .navbar-item {
 	color: white;
 	transition: background-color 0.8s ease; 
@@ -106,6 +111,8 @@ img {
 	display: flex;
 	justify-content: space-around;
 	margin: 20px;
+	flex-wrap: wrap;
+	justify-content: center; 
 }
 
 .card {
@@ -115,6 +122,8 @@ img {
 	overflow: hidden;
 	text-align: center;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	margin: 10px;
+	max-width: 400px;
 }
 
 .card img {
@@ -138,10 +147,52 @@ img {
 
 .button.is-red {
 	margin-top: 10px;
-	background-color:darkred; 
+	background-color: darkred; 
 	color: white; 
 }
 
 .button.is-red:hover {
 	background-color: rgba(173, 1, 33, 0.512); 
+}
+
+audio {
+	width: 100%;
+	max-width: 300px; 
+}
+
+/* Медиа запросы для мобильных устройств */
+@media (max-width: 320px) {
+	.columns {
+		flex-direction: column; /* Столбиковое расположение */
+	}
+
+	.top img { 
+		max-height: 5vh; /* Высота изображения 5% от высоты экрана */
+		width: auto; /* Автоматическая ширина для сохранения пропорций */
+		height: auto; /* Автоматическая высота для сохранения пропорций */
+	  }
+	
+	  .featured_wrapper img {
+		max-width: 100%; /* Полная ширина на мобильных устройствах */
+		max-height: 20%; /* Высота изображения 5% от высоты экрана */
+		object-fit: cover;
+		object-position: top;
+	  }
+
+	.column {
+		width: 100%; /* Полная ширина для колонок */
+	}
+
+	.card-container {
+		flex-direction: column; /* Столбиковое расположение карточек */
+		align-items: center; /* Центрирование карточек */
+	}
+
+	.card {
+		max-width: 90%; /* Ширина карточки на мобильных устройствах */
+	}
+
+	audio {
+		max-width: 150px; /* Уменьшение максимальной ширины проигрывателя на мобильных устройствах */
+	}
 }
